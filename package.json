@@ -1,0 +1,6 @@
+{
+  "name": "cineverse-plus",
+  "private": true,
+  "scripts": { "test": "node --test tests/logic.test.js" },
+  "devDependencies": { "jsdom": "^26.0.0" }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cineverse+ — options</title>
+  <style>
+    :root { color-scheme: light dark; --fg: #1f2328; --muted: #59636e; --border: #d0d7de; --bg: #fff; --accent: #f5c518; }
+    @media (prefers-color-scheme: dark) { :root { --fg: #e6edf3; --muted: #9198a1; --border: #3d444d; --bg: #111114; } }
+    body { font: 14px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; color: var(--fg); background: var(--bg); max-width: 620px; margin: 32px auto; padding: 0 16px; }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    p { color: var(--muted); margin: 6px 0 16px; }
+    label { display: block; font-weight: 600; margin: 14px 0 4px; }
+    input { width: 100%; box-sizing: border-box; padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; background: transparent; color: var(--fg); font: inherit; }
+    .row { display: flex; gap: 8px; margin-top: 16px; }
+    button { padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px; background: transparent; color: var(--fg); font: inherit; cursor: pointer; }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 600; }
+    #status { margin-top: 12px; color: var(--muted); min-height: 1.5em; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <h1>Cineverse+</h1>
+  <p><strong>Soonest showings near me</strong> works without anything here: pick a film on the booking page and press the yellow button.</p>
+
+  <h2 style="font-size:16px;margin:24px 0 0">IMDb ratings</h2>
+  <p>Ratings come from OMDb, which needs a free key: go to <a href="https://www.omdbapi.com/apikey.aspx" target="_blank" rel="noopener">omdbapi.com/apikey.aspx</a>, choose <em>FREE (1,000 daily limit)</em>, and click the link in the email they send. The key stays in this browser and is only sent to <code>www.omdbapi.com</code>, together with the film titles. Ratings are remembered for 3 days, so a normal day uses a few dozen lookups.</p>
+  <label for="key">OMDb API key</label>
+  <input id="key" autocomplete="off" spellcheck="false" placeholder="8 characters, from the email">
+  <div class="row">
+    <button class="primary" id="save">Save and test</button>
+    <button id="clear">Remove</button>
+  </div>
+  <div id="status" role="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>

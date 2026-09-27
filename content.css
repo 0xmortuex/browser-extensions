@@ -1,0 +1,29 @@
+.cvp-imdb {
+  display: inline-flex; align-items: center; gap: 4px; margin: 4px 0 2px; padding: 1px 7px;
+  border-radius: 5px; background: #f5c518; color: #000 !important; font: 600 12px/1.6 system-ui, "Segoe UI", sans-serif;
+  text-decoration: none !important; width: max-content;
+}
+.cvp-imdb b { font-weight: 800; letter-spacing: -.02em; }
+.cvp-imdb:hover { filter: brightness(1.08); }
+
+.cvp-notice {
+  position: fixed; z-index: 2147483000; right: 16px; bottom: 16px; max-width: 360px; display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px; border-radius: 10px; background: #1d1d22; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  font: 13px/1.4 system-ui, "Segoe UI", sans-serif;
+}
+.cvp-notice button { font: inherit; cursor: pointer; border: 0; border-radius: 6px; padding: 4px 10px; background: #f5c518; color: #000; font-weight: 600; white-space: nowrap; }
+.cvp-notice .cvp-x { background: transparent; color: #aaa; padding: 0 4px; font-size: 18px; }
+
+/* Its own colours: the booking page's columns are dark, and inherited text there is too. */
+.cvp-soon { margin: 0 0 14px; padding: 12px 14px; border-radius: 12px; background: #1b1b1f; color: #f2f2f2; border: 1px solid rgba(245,197,24,.5); font: 14px/1.4 system-ui, "Segoe UI", sans-serif; }
+.cvp-soon-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.cvp-go { cursor: pointer; border: 0; border-radius: 8px; padding: 7px 14px; background: #f5c518; color: #000; font: 600 14px system-ui, "Segoe UI", sans-serif; }
+.cvp-go:disabled { opacity: .6; cursor: progress; }
+.cvp-status { color: #c9c9cf; }
+.cvp-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; }
+.cvp-list:empty { display: none; }
+.cvp-list a { display: grid; grid-template-columns: 56px 1fr auto auto; gap: 10px; align-items: baseline; padding: 6px 8px; border-radius: 8px; color: inherit !important; text-decoration: none !important; }
+.cvp-list a:hover { background: rgba(245,197,24,.22); }
+.cvp-time { color: #f5c518; font-size: 16px; }
+.cvp-cinema { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cvp-km, .cvp-fmt { color: #b4b4bb; font-size: 12.5px; white-space: nowrap; }

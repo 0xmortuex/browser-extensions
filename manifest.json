@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Cineverse+",
+  "version": "1.0.0",
+  "description": "Paribu Cineverse, better: IMDb ratings on every film, and the soonest showings at the cinemas nearest you.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.omdbapi.com/*"],
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.paribucineverse.com/*"],
+      "js": ["cineverse-logic.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.paribucineverse.com/biletleme*"],
+      "js": ["geo-bridge.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+}

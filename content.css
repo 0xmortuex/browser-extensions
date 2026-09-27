@@ -1,0 +1,39 @@
+/* DevForum+ — uses the forum's own colour variables (Discourse), so it follows
+   its light and dark themes. */
+.cooked a.dfp-api {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--tertiary, #0a84ff);
+  text-underline-offset: 2px;
+}
+.cooked a.dfp-api:hover { color: var(--tertiary, #0a84ff); text-decoration-style: solid; }
+
+.cooked pre.dfp-has-copy { position: relative; }
+.dfp-copy {
+  position: absolute; top: 6px; right: 6px;
+  padding: 2px 9px; font-size: 12px; cursor: pointer;
+  border: 1px solid var(--primary-low, #ddd); border-radius: 4px;
+  background: var(--secondary, #fff); color: var(--primary-high, #555);
+  opacity: 0; transition: opacity .15s;
+}
+.cooked pre.dfp-has-copy:hover .dfp-copy, .dfp-copy:focus { opacity: 1; }
+
+.dfp-docs-btn button { font-size: 13px; font-weight: 600; padding: 0 10px; color: var(--primary-high, #555); }
+
+.dfp-search {
+  position: fixed; z-index: 100000; top: 90px; left: 50%; transform: translateX(-50%);
+  width: min(560px, calc(100vw - 32px));
+  background: var(--secondary, #fff); color: var(--primary, #222);
+  border: 1px solid var(--primary-low, #ddd); border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .25); padding: 10px;
+}
+.dfp-search input {
+  width: 100%; box-sizing: border-box; padding: 9px 12px; font-size: 15px;
+  border: 1px solid var(--primary-low, #ddd); border-radius: 7px;
+  background: var(--secondary, #fff); color: inherit;
+}
+.dfp-search ol { list-style: none; margin: 8px 0 0; padding: 0; }
+.dfp-search li { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+.dfp-search li.on, .dfp-search li:hover { background: var(--tertiary-low, rgba(10, 132, 255, .12)); }
+.dfp-search li small { color: var(--primary-medium, #888); text-transform: uppercase; font-size: 10px; letter-spacing: .04em; }
+.dfp-hint { margin-top: 6px; font-size: 11px; color: var(--primary-medium, #888); }

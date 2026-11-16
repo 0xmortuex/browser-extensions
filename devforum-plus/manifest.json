@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "DevForum+",
+  "version": "1.0.0",
+  "description": "Roblox DevForum, for developers: API names in code link to their docs, a docs search on Alt+D, and a Copy button on code.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://raw.githubusercontent.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://devforum.roblox.com/*"],
+      "js": ["devforum-logic.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" }
+}

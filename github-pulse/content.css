@@ -1,0 +1,33 @@
+/* GitHub Pulse bar — uses GitHub's own colour variables, so it matches
+   light, dark and dimmed themes. */
+.gp-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 0 auto;
+  max-width: 1280px;
+  border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted, #d8dee4));
+  font-size: 12px;
+  color: var(--fgColor-muted, var(--color-fg-muted, #59636e));
+}
+.gp-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+a.gp-item:hover .gp-label { text-decoration: underline; }
+.gp-label { color: var(--fgColor-default, var(--color-fg-default, #1f2328)); font-weight: 600; }
+.gp-detail { color: var(--fgColor-muted, var(--color-fg-muted, #59636e)); }
+.gp-ico { display: inline-flex; }
+.gp-ok .gp-ico { color: var(--fgColor-success, var(--color-success-fg, #1a7f37)); }
+.gp-bad .gp-ico { color: var(--fgColor-danger, var(--color-danger-fg, #d1242f)); }
+.gp-busy .gp-ico { color: var(--fgColor-attention, var(--color-attention-fg, #9a6700)); }
+.gp-busy .gp-ico svg { animation: gp-spin 1.4s linear infinite; }
+.gp-quiet .gp-ico { color: var(--fgColor-muted, var(--color-fg-muted, #59636e)); }
+@keyframes gp-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .gp-busy .gp-ico svg { animation: none; } }
